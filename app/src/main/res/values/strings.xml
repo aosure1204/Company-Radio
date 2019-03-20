@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">收音机</string>
+    <string name="back">返回</string>
+    <string name="search">搜索</string>
+    <string name="scan">浏览</string>
+    <string name="list">列表</string>
+    <string name="fm">FM</string>
+    <string name="am">AM</string>
+    <string name="search_radio">搜索电台</string>
+
+    <string name="mhz" translatable="false">MHz</string>
+    <string name="khz" translatable="false">KHz</string>
+    <string name="title_activity_list">ListActivity</string>
+    <string name="title_activity_test">TestActivity</string>
+</resources>

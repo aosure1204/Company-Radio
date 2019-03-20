@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="delete_img_marginTop">78dp</dimen>
+    <dimen name="fm_first_row_marginTop">20dp</dimen>
+    <dimen name="fm_second_row_marginTop">78dp</dimen>
+    <dimen name="am_second_row_marginTop">18dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+</resources>
