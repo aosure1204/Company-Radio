@@ -6,4 +6,7 @@
 
     <color name="action_title_selected">#72F3FF</color>
     <color name="action_title_unselected">#FFFFFF</color>
+
+    <color name="current_freq_color">#00F0FF</color>
+    <color name="other_freq_color">#FFFFFF</color>
 </resources>

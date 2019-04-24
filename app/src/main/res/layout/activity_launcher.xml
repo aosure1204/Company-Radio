@@ -61,20 +61,20 @@
             android:gravity="bottom">
 
             <ImageButton
-                android:id="@+id/btn_seek_up"
+                android:id="@+id/btn_seek_down"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="120dp"
                 android:background="#00000000"
-                android:src="@drawable/ic_seek_up" />
+                android:src="@drawable/ic_seek_down" />
 
             <ImageButton
-                android:id="@+id/btn_step_up"
+                android:id="@+id/btn_step_down"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="666dp"
                 android:background="#00000000"
-                android:src="@drawable/ic_step_up" />
+                android:src="@drawable/ic_step_down" />
 
             <!--<LinearLayout
                 android:id="@+id/current_freq_container"
@@ -101,19 +101,19 @@
             </LinearLayout>-->
 
             <ImageButton
-                android:id="@+id/btn_step_down"
+                android:id="@+id/btn_step_up"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="120dp"
                 android:background="#00000000"
-                android:src="@drawable/ic_step_down" />
+                android:src="@drawable/ic_step_up" />
 
             <ImageButton
-                android:id="@+id/btn_seek_down"
+                android:id="@+id/btn_seek_up"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#00000000"
-                android:src="@drawable/ic_seek_down" />
+                android:src="@drawable/ic_seek_up" />
         </LinearLayout>
 
         <RelativeLayout
@@ -122,7 +122,7 @@
             android:layout_height="236dp"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:visibility="gone">
+            android:clickable="true">
 
             <RelativeLayout
                 android:id="@+id/fm_collect_event_area"
@@ -130,235 +130,240 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/fm_first_row_marginTop">
 
-                <!--<LinearLayout
+                <RelativeLayout
                     android:id="@+id/fm_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="84dp"
-                    android:background="@drawable/bg_fm_1"
-                    android:gravity="center">
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="35dp"
-                        android:src="@drawable/ic_current_selected" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="98MHz"
-                        android:textColor="#FFFFFF"
-                        android:textSize="24sp" />
-                </LinearLayout>-->
-
-                <LinearLayout
-                    android:id="@+id/fm_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="284dp"
+                    android:layout_height="86dp"
                     android:layout_marginLeft="87dp"
                     android:background="@drawable/bg_fm_1">
                     <include layout="@layout/collect_content_item" />
-                </LinearLayout>
+                    <include layout="@layout/collect_add_item"/>
+                </RelativeLayout>
 
-                <LinearLayout
+                <RelativeLayout
                     android:id="@+id/fm_2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="262dp"
+                    android:layout_height="86dp"
                     android:layout_marginLeft="320dp"
                     android:background="@drawable/bg_fm_2">
                     <include layout="@layout/collect_content_item" />
-                </LinearLayout>
+                    <include layout="@layout/collect_add_item" />
+                </RelativeLayout>
 
-                <LinearLayout
+                <RelativeLayout
                     android:id="@+id/fm_3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="239dp"
+                    android:layout_height="86dp"
                     android:layout_marginLeft="554dp"
                     android:background="@drawable/bg_fm_3">
                     <include layout="@layout/collect_content_item" />
-                </LinearLayout>
+                    <include layout="@layout/collect_add_item" />
+                </RelativeLayout>
 
-                <LinearLayout
+                <RelativeLayout
                     android:id="@+id/fm_4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="239dp"
+                    android:layout_height="86dp"
                     android:layout_marginLeft="786dp"
                     android:background="@drawable/bg_fm_4">
                     <include layout="@layout/collect_content_item" />
-                </LinearLayout>
+                    <include layout="@layout/collect_add_item" />
+                </RelativeLayout>
 
-                <LinearLayout
+                <RelativeLayout
                     android:id="@+id/fm_5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="262dp"
+                    android:layout_height="86dp"
                     android:layout_marginLeft="998dp"
                     android:background="@drawable/bg_fm_5">
                     <include layout="@layout/collect_content_item" />
-                </LinearLayout>
+                    <include layout="@layout/collect_add_item" />
+                </RelativeLayout>
 
-                <LinearLayout
+                <RelativeLayout
                     android:id="@+id/fm_6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="284dp"
+                    android:layout_height="86dp"
                     android:layout_marginLeft="1208dp"
                     android:background="@drawable/bg_fm_6">
                     <include layout="@layout/collect_content_item" />
-                </LinearLayout>
+                    <include layout="@layout/collect_add_item" />
+                </RelativeLayout>
 
-                <LinearLayout
+                <RelativeLayout
                     android:id="@+id/fm_7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="325dp"
+                    android:layout_height="106dp"
                     android:layout_marginTop="@dimen/fm_second_row_marginTop"
                     android:background="@drawable/bg_fm_7">
                     <include layout="@layout/collect_content_item" />
-                </LinearLayout>
+                    <include layout="@layout/collect_add_item" />
+                </RelativeLayout>
 
-                <LinearLayout
+                <RelativeLayout
                     android:id="@+id/fm_8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="297dp"
+                    android:layout_height="106dp"
                     android:layout_marginTop="@dimen/fm_second_row_marginTop"
                     android:layout_marginLeft="262dp"
                     android:background="@drawable/bg_fm_8">
                     <include layout="@layout/collect_content_item" />
-                </LinearLayout>
+                    <include layout="@layout/collect_add_item" />
+                </RelativeLayout>
 
-                <LinearLayout
+                <RelativeLayout
                     android:id="@+id/fm_9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="268dp"
+                    android:layout_height="106dp"
                     android:layout_marginTop="@dimen/fm_second_row_marginTop"
                     android:layout_marginLeft="525dp"
                     android:background="@drawable/bg_fm_9">
                     <include layout="@layout/collect_content_item" />
-                </LinearLayout>
+                    <include layout="@layout/collect_add_item" />
+                </RelativeLayout>
 
-                <LinearLayout
+                <RelativeLayout
                     android:id="@+id/fm_10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="268dp"
+                    android:layout_height="106dp"
                     android:layout_marginTop="@dimen/fm_second_row_marginTop"
                     android:layout_marginLeft="787dp"
                     android:background="@drawable/bg_fm_10">
                     <include layout="@layout/collect_content_item" />
-                </LinearLayout>
+                    <include layout="@layout/collect_add_item" />
+                </RelativeLayout>
 
-                <LinearLayout
+                <RelativeLayout
                     android:id="@+id/fm_11"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="297dp"
+                    android:layout_height="106dp"
                     android:layout_marginTop="@dimen/fm_second_row_marginTop"
                     android:layout_marginLeft="1021dp"
                     android:background="@drawable/bg_fm_11">
                     <include layout="@layout/collect_content_item" />
-                </LinearLayout>
+                    <include layout="@layout/collect_add_item" />
+                </RelativeLayout>
 
-                <LinearLayout
+                <RelativeLayout
                     android:id="@+id/fm_12"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="325dp"
+                    android:layout_height="106dp"
                     android:layout_marginTop="@dimen/fm_second_row_marginTop"
                     android:layout_marginLeft="1255dp"
                     android:background="@drawable/bg_fm_12">
                     <include layout="@layout/collect_content_item" />
-                </LinearLayout>
+                    <include layout="@layout/collect_add_item" />
+                </RelativeLayout>
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/fm_collect_delete_container"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:visibility="gone">
 
-                <ImageView
-                    android:id="@+id/img_delete_fm_1"
+                <ImageButton
+                    android:id="@+id/btn_delete_fm_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="340dp"
-                    android:src="@drawable/ic_delete" />
+                    android:src="@drawable/ic_delete"
+                    android:background="#00000000" />
 
-                <ImageView
-                    android:id="@+id/img_delete_fm_2"
+                <ImageButton
+                    android:id="@+id/btn_delete_fm_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="550dp"
-                    android:src="@drawable/ic_delete" />
+                    android:src="@drawable/ic_delete"
+                    android:background="#00000000" />
 
-                <ImageView
-                    android:id="@+id/img_delete_fm_3"
+                <ImageButton
+                    android:id="@+id/btn_delete_fm_3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="760dp"
-                    android:src="@drawable/ic_delete" />
+                    android:src="@drawable/ic_delete"
+                    android:background="#00000000" />
 
-                <ImageView
-                    android:id="@+id/img_delete_fm_4"
+                <ImageButton
+                    android:id="@+id/btn_delete_fm_4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="980dp"
-                    android:src="@drawable/ic_delete" />
+                    android:src="@drawable/ic_delete"
+                    android:background="#00000000" />
 
-                <ImageView
-                    android:id="@+id/img_delete_fm_5"
+                <ImageButton
+                    android:id="@+id/btn_delete_fm_5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="1194dp"
-                    android:src="@drawable/ic_delete" />
+                    android:src="@drawable/ic_delete"
+                    android:background="#00000000" />
 
-                <ImageView
-                    android:id="@+id/img_delete_fm_6"
+                <ImageButton
+                    android:id="@+id/btn_delete_fm_6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="1410dp"
-                    android:src="@drawable/ic_delete" />
+                    android:src="@drawable/ic_delete"
+                    android:background="#00000000" />
 
-                <ImageView
-                    android:id="@+id/img_delete_fm_7"
+                <ImageButton
+                    android:id="@+id/btn_delete_fm_7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="300dp"
                     android:layout_marginTop="@dimen/delete_img_marginTop"
-                    android:src="@drawable/ic_delete" />
+                    android:src="@drawable/ic_delete"
+                    android:background="#00000000" />
 
-                <ImageView
-                    android:id="@+id/img_delete_fm_8"
+                <ImageButton
+                    android:id="@+id/btn_delete_fm_8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="534dp"
                     android:layout_marginTop="@dimen/delete_img_marginTop"
-                    android:src="@drawable/ic_delete" />
+                    android:src="@drawable/ic_delete"
+                    android:background="#00000000" />
 
-                <ImageView
-                    android:id="@+id/img_delete_fm_9"
+                <ImageButton
+                    android:id="@+id/btn_delete_fm_9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="768dp"
                     android:layout_marginTop="@dimen/delete_img_marginTop"
-                    android:src="@drawable/ic_delete" />
+                    android:src="@drawable/ic_delete"
+                    android:background="#00000000" />
 
-                <ImageView
-                    android:id="@+id/img_delete_fm_10"
+                <ImageButton
+                    android:id="@+id/btn_delete_fm_10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="1006dp"
                     android:layout_marginTop="@dimen/delete_img_marginTop"
-                    android:src="@drawable/ic_delete" />
+                    android:src="@drawable/ic_delete"
+                    android:background="#00000000" />
 
-                <ImageView
-                    android:id="@+id/img_delete_fm_11"
+                <ImageButton
+                    android:id="@+id/btn_delete_fm_11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="1236dp"
                     android:layout_marginTop="@dimen/delete_img_marginTop"
-                    android:src="@drawable/ic_delete" />
+                    android:src="@drawable/ic_delete"
+                    android:background="#00000000" />
 
-                <ImageView
-                    android:id="@+id/img_delete_fm_12"
+                <ImageButton
+                    android:id="@+id/btn_delete_fm_12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="1464dp"
                     android:layout_marginTop="@dimen/delete_img_marginTop"
-                    android:src="@drawable/ic_delete" />
+                    android:src="@drawable/ic_delete"
+                    android:background="#00000000" />
             </RelativeLayout>
         </RelativeLayout>
 
@@ -367,7 +372,9 @@
             android:layout_width="1580dp"
             android:layout_height="154dp"
             android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true">
+            android:layout_centerHorizontal="true"
+            android:clickable="true"
+            android:visibility="gone">
 
             <RelativeLayout
                 android:id="@+id/am_collect_event_area"
@@ -375,113 +382,126 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/am_second_row_marginTop">
 
-                <LinearLayout
+                <RelativeLayout
                     android:id="@+id/am_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="325dp"
+                    android:layout_height="106dp"
                     android:background="@drawable/bg_am_1"
                     android:orientation="horizontal">
-                    <include layout="@layout/collect_content_item_am" />
-                </LinearLayout>
+                    <include layout="@layout/collect_content_item" />
+                    <include layout="@layout/collect_add_item" />
+                </RelativeLayout>
 
-                <LinearLayout
+                <RelativeLayout
                     android:id="@+id/am_2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="297dp"
+                    android:layout_height="106dp"
                     android:layout_marginLeft="262dp"
                     android:background="@drawable/bg_am_2"
                     android:orientation="horizontal">
-                    <include layout="@layout/collect_content_item_am" />
-                </LinearLayout>
+                    <include layout="@layout/collect_content_item" />
+                    <include layout="@layout/collect_add_item" />
+                </RelativeLayout>
 
-                <LinearLayout
+                <RelativeLayout
                     android:id="@+id/am_3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="268dp"
+                    android:layout_height="106dp"
                     android:layout_marginLeft="525dp"
                     android:background="@drawable/bg_am_3"
                     android:orientation="horizontal">
-                    <include layout="@layout/collect_content_item_am" />
-                </LinearLayout>
+                    <include layout="@layout/collect_content_item" />
+                    <include layout="@layout/collect_add_item" />
+                </RelativeLayout>
 
-                <LinearLayout
+                <RelativeLayout
                     android:id="@+id/am_4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="268dp"
+                    android:layout_height="106dp"
                     android:layout_marginLeft="787dp"
                     android:background="@drawable/bg_am_4"
                     android:orientation="horizontal">
-                    <include layout="@layout/collect_content_item_am" />
-                </LinearLayout>
+                    <include layout="@layout/collect_content_item" />
+                    <include layout="@layout/collect_add_item" />
+                </RelativeLayout>
 
-                <LinearLayout
+                <RelativeLayout
                     android:id="@+id/am_5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="297dp"
+                    android:layout_height="106dp"
                     android:layout_marginLeft="1021dp"
                     android:background="@drawable/bg_am_5"
                     android:orientation="horizontal">
-                    <include layout="@layout/collect_content_item_am" />
-                </LinearLayout>
+                    <include layout="@layout/collect_content_item" />
+                    <include layout="@layout/collect_add_item" />
+                </RelativeLayout>
 
-                <LinearLayout
+                <RelativeLayout
                     android:id="@+id/am_6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="325dp"
+                    android:layout_height="106dp"
                     android:layout_marginLeft="1255dp"
                     android:background="@drawable/bg_am_6"
                     android:orientation="horizontal">
-                    <include layout="@layout/collect_content_item_am" />
-                </LinearLayout>
+                    <include layout="@layout/collect_content_item" />
+                    <include layout="@layout/collect_add_item" />
+                </RelativeLayout>
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/am_collect_delete_container"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:visibility="gone">
 
-                <ImageView
-                    android:id="@+id/img_delete_am_1"
+                <ImageButton
+                    android:id="@+id/btn_delete_am_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="300dp"
-                    android:src="@drawable/ic_delete" />
+                    android:src="@drawable/ic_delete"
+                    android:background="#00000000" />
 
-                <ImageView
-                    android:id="@+id/img_delete_am_2"
+                <ImageButton
+                    android:id="@+id/btn_delete_am_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="534dp"
-                    android:src="@drawable/ic_delete" />
+                    android:src="@drawable/ic_delete"
+                    android:background="#00000000" />
 
-                <ImageView
-                    android:id="@+id/img_delete_am_3"
+                <ImageButton
+                    android:id="@+id/btn_delete_am_3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="768dp"
-                    android:src="@drawable/ic_delete" />
+                    android:src="@drawable/ic_delete"
+                    android:background="#00000000" />
 
-                <ImageView
-                    android:id="@+id/img_delete_am_4"
+                <ImageButton
+                    android:id="@+id/btn_delete_am_4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="1006dp"
-                    android:src="@drawable/ic_delete" />
+                    android:src="@drawable/ic_delete"
+                    android:background="#00000000" />
 
-                <ImageView
-                    android:id="@+id/img_delete_am_5"
+                <ImageButton
+                    android:id="@+id/btn_delete_am_5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="1236dp"
-                    android:src="@drawable/ic_delete" />
+                    android:src="@drawable/ic_delete"
+                    android:background="#00000000" />
 
-                <ImageView
-                    android:id="@+id/img_delete_am_6"
+                <ImageButton
+                    android:id="@+id/btn_delete_am_6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="1464dp"
-                    android:src="@drawable/ic_delete" />
+                    android:src="@drawable/ic_delete"
+                    android:background="#00000000" />
             </RelativeLayout>
         </RelativeLayout>
 

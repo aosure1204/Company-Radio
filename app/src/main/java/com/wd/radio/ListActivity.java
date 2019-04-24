@@ -10,6 +10,14 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.wd.airdemo.MyApp;
+import com.wd.airdemo.module.DataCarbus;
+import com.wd.airdemo.module.FinalRadio;
+import com.wd.airdemo.module.RemoteTools;
+import com.wd.airdemo.util.IUiNotify;
+
+import java.util.Arrays;
+
 public class ListActivity extends AppCompatActivity implements View.OnClickListener {
 
     private static final String TAG = "ListActivity";
@@ -57,11 +65,24 @@ public class ListActivity extends AppCompatActivity implements View.OnClickListe
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 4, GridLayoutManager.VERTICAL, false);
         mRecyclerView.setLayoutManager(gridLayoutManager);
         if(mWorkMode == DataUtil.WORK_MODE_FM) {
-            mListAdapter = new ListAdapter(freqFMArray, mWorkMode);
+            mListAdapter = new ListAdapter(DataCarbus.fmInts, mWorkMode, this);
         } else if(mWorkMode == DataUtil.WORK_MODE_AM) {
-            mListAdapter = new ListAdapter(freqAMArray, mWorkMode);
+            mListAdapter = new ListAdapter(DataCarbus.amInts, mWorkMode, this);
         }
+        mListAdapter.setOnListItemClickListener(mOnListItemClickListener);
         mRecyclerView.setAdapter(mListAdapter);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        MyApp.getOBJ().requestRadioSource();
+        if(mWorkMode == DataUtil.WORK_MODE_AM) {
+            MyApp.getOBJ().requestAMApp();
+        } else {
+            MyApp.getOBJ().requestFMApp();
+        }
     }
 
     @Override
@@ -72,22 +93,27 @@ public class ListActivity extends AppCompatActivity implements View.OnClickListe
                 finish();
                 break;
             case R.id.action_bar_fm:
+                sendCmd(FinalRadio.C_BAND, DataUtil.TRANSFER_VALUE_00);
                 mWorkMode = DataUtil.WORK_MODE_FM;
+                MyApp.getOBJ().requestFMApp();
                 updateActionBar(DataUtil.WORK_MODE_FM);
-                mListAdapter = new ListAdapter(freqFMArray, mWorkMode);
+                mListAdapter = new ListAdapter(DataCarbus.fmInts, mWorkMode, this);
+                mListAdapter.setOnListItemClickListener(mOnListItemClickListener);
                 mRecyclerView.setAdapter(mListAdapter);
                 mListAdapter.notifyDataSetChanged();
                 break;
             case R.id.action_bar_am:
+                sendCmd(FinalRadio.C_BAND, DataUtil.TRANSFER_VALUE_01);
                 mWorkMode = DataUtil.WORK_MODE_AM;
+                MyApp.getOBJ().requestAMApp();
                 updateActionBar(DataUtil.WORK_MODE_AM);
-                mListAdapter = new ListAdapter(freqAMArray, mWorkMode);
+                mListAdapter = new ListAdapter(DataCarbus.amInts, mWorkMode, this);
+                mListAdapter.setOnListItemClickListener(mOnListItemClickListener);
                 mRecyclerView.setAdapter(mListAdapter);
                 mListAdapter.notifyDataSetChanged();
                 break;
         }
     }
-
 
     /**
      * FM 或 AM 模式
@@ -111,5 +137,26 @@ public class ListActivity extends AppCompatActivity implements View.OnClickListe
                 break;
         }
     }
+	
+	private void sendCmd(int i, int id) {
+        RemoteTools.cmd(i, id);
+    }
+
+    private ListAdapter.OnListItemClickListener mOnListItemClickListener = new ListAdapter.OnListItemClickListener() {
+/*        @Override
+        public void onCollect(int freq, boolean isCollect) {
+            if(isCollect) {
+                DataUtil.addCollect(mWorkMode, freq);
+            } else {
+                DataUtil.removeCollect(mWorkMode, freq);
+            }
+        }*/
+
+        @Override
+        public void onClickFreq(int freq) {
+            sendCmd(FinalRadio.C_FREQ, freq);
+            finish();
+        }
+    };
 
 }

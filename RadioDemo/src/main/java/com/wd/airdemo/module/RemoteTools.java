@@ -21,15 +21,15 @@ public class RemoteTools {
         }
     }
 
-
-    public static void unregister(ITaskCallback cb, int code) {
+    // unused
+/*    public static void unregister(ITaskCallback cb, int code) {
         if (mModule == null) return;
         try {
             mModule.unregisterCallback(cb, code);
         } catch (RemoteException e) {
             e.printStackTrace();
         }
-    }
+    }*/
 
     public static void cmd(int cmd, int val) {
         cmd(cmd, new int[]{val}, null, null);

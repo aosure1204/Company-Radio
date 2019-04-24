@@ -7,6 +7,7 @@
     <string name="fm">FM</string>
     <string name="am">AM</string>
     <string name="search_radio">搜索电台</string>
+    <string name="search_finish">搜索完成</string>
 
     <string name="mhz" translatable="false">MHz</string>
     <string name="khz" translatable="false">KHz</string>

@@ -4,17 +4,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center">
-        <ImageView
-            android:id="@+id/img_collect_item_current"
+        <ImageButton
+            android:id="@+id/btn_collect_item_current"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="35dp"
-            android:src="@drawable/ic_current_selected"/>
-        <TextView
-            android:id="@+id/text_collect_item_freq"
+            android:src="@drawable/ic_current_selected"
+            android:background="#00000000"/>
+        <Button
+            android:id="@+id/btn_collect_item_freq"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="98MHz"
+            android:paddingLeft="35dp"
+            android:paddingRight="25dp"
             android:textColor="#FFFFFF"
-            android:textSize="24sp"/>
+            android:textSize="24sp"
+            android:background="#00000000"/>
 </LinearLayout>

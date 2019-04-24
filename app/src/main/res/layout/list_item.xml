@@ -7,7 +7,8 @@
     android:layout_marginTop="28dp"
     android:layout_marginBottom="28dp"
     android:background="@drawable/bg_list_item"
-    android:gravity="center">
+    android:gravity="center"
+    android:clickable="true">
 
     <TextView
         android:id="@+id/item_freq_value"
@@ -37,10 +38,11 @@
             android:textSize="24sp" />
     </LinearLayout>
 
-    <ImageButton
+    <ImageView
         android:id="@+id/item_btn_collection"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:src="@drawable/ic_collect"
         android:background="@android:color/transparent" />
 
 </LinearLayout>

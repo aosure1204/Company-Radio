@@ -9,12 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <service android:name=".MyServer" />
-        <service android:name=".KeepAliveServer" >
-            <intent-filter>
-                <action android:name="com.wd.carbus"/>
-            </intent-filter>
-        </service>
     </application>
 
 </manifest>

@@ -13,4 +13,7 @@ public class DataCarbus {
         }
     }
     public static String sFactorySn = "";
+
+    public static int[] fmInts ;
+    public static int[] amInts;
 }
